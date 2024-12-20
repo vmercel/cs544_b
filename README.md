@@ -1,6 +1,16 @@
 # Diet Recommender System
 
-This is a robust 2-tier application that facilitates diet management and recommendation. The system is split into two roles: **User** and **Dietitian**, each operating on separate ports. The application is designed with scalability, security, and reliability in mind.
+This is a robust 2-tier application that facilitates diet management and recommendation. The system has the user roles: **User**, **Dietitian**, and **Admin**. It is split up into two, each operating on separate ports. The application is designed with scalability, security, and reliability in mind.
+
+---
+
+
+## **Swagger UI**
+Explore and test the API endpoints interactively:
+![Swagger UI](swaggerui.png)
+
+Hosted at: [Microsoft Azure Cloud Platform](https://cs544-app.azurewebsites.net/swagger-ui/index.html#/)
+
 
 ---
 
@@ -77,10 +87,7 @@ This is a robust 2-tier application that facilitates diet management and recomme
 ## **System Architecture**
 
 ### **JMS Architecture**
-![JMS Architecture](https://via.placeholder.com/800x400.png?text=JMS+Architecture)
-
-### **Swagger UI**
-![Swagger UI](https://via.placeholder.com/800x400.png?text=Swagger+UI)
+![JMS Architecture](jmsarch.png)
 
 ---
 
@@ -112,11 +119,11 @@ This is a robust 2-tier application that facilitates diet management and recomme
    ```
 2. Create an App Service Plan:
    ```bash
-   az appservice plan create --name cs544_a --resource-group diet_group --sku B1 --is-linux
+   az appservice plan create --name cs544_b --resource-group diet_group --sku B1 --is-linux
    ```
 3. Create a Web App:
    ```bash
-   az webapp create --resource-group diet_group --plan cs544_a --name cs544-app --runtime "JAVA:21-java21"
+   az webapp create --resource-group diet_group --plan cs544_b --name cs544-app --runtime "JAVA:21-java21"
    ```
 4. Deploy the WAR file:
    ```bash

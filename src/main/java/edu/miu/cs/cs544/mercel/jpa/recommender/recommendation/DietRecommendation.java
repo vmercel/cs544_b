@@ -23,6 +23,8 @@ public class DietRecommendation {
 
     private LocalDate createdDate;
 
+    @Version
+    private Long version;
     // Getters and setters
     public Long getId() {
         return id;

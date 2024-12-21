@@ -22,6 +22,8 @@ public class DietitianReview {
 
     private Boolean approved;
 
+    @Version
+    private Integer version;
     // Getters and Setters
 
 
